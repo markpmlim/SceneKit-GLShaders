@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		512732A21A1BEBB70070D96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512732A11A1BEBB70070D96E /* AppDelegate.swift */; };
+		512732A41A1BEBB70070D96E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 512732A31A1BEBB70070D96E /* art.scnassets */; };
+		512732A61A1BEBB70070D96E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512732A51A1BEBB70070D96E /* GameViewController.swift */; };
+		512732A91A1BEBB70070D96E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512732A71A1BEBB70070D96E /* Main.storyboard */; };
+		512732AB1A1BEBB70070D96E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512732AA1A1BEBB70070D96E /* Images.xcassets */; };
+		512732AE1A1BEBB70070D96E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512732AC1A1BEBB70070D96E /* LaunchScreen.xib */; };
+		512732C41A1C0D410070D96E /* geometry_ripple.shader in Resources */ = {isa = PBXBuildFile; fileRef = 512732C31A1C0D410070D96E /* geometry_ripple.shader */; };
+		51F484B21A223D9100B4954F /* sm_surf.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484B11A223D9100B4954F /* sm_surf.shader */; };
+		51F484B41A223D9E00B4954F /* fixed_toon.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484B31A223D9E00B4954F /* fixed_toon.shader */; };
+		51F484F21A22540300B4954F /* sm_light.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F11A22540300B4954F /* sm_light.shader */; };
+		51F484F41A22541900B4954F /* sm_frag.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F31A22541900B4954F /* sm_frag.shader */; };
+		51F484F61A22542100B4954F /* sm_geom.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F51A22542100B4954F /* sm_geom.shader */; };
+		51F484FA1A22775400B4954F /* ModelShaderSettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F484F91A22775400B4954F /* ModelShaderSettingsModels.swift */; };
+		51F484FD1A23CC8B00B4954F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F484FC1A23CC8B00B4954F /* SettingsTableViewController.swift */; };
+		51F484FF1A23D3B000B4954F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F484FE1A23D3B000B4954F /* Settings.swift */; };
+		51F485071A2779E700B4954F /* red_dot_product.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485061A2779E700B4954F /* red_dot_product.shader */; };
+		51F485091A2780E300B4954F /* twisted.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485081A2780E300B4954F /* twisted.shader */; };
+		51F4850C1A27942400B4954F /* mask.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850B1A27942400B4954F /* mask.shader */; };
+		51F4850E1A27954D00B4954F /* outline.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850D1A27954D00B4954F /* outline.shader */; };
+		51F485101A279C9C00B4954F /* light_source_toon.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850F1A279C9C00B4954F /* light_source_toon.shader */; };
+		51F485121A27DEB300B4954F /* bubble.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485111A27DEB300B4954F /* bubble.shader */; };
+		51F485141A27E3F400B4954F /* alpha_dot_product.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485131A27E3F400B4954F /* alpha_dot_product.shader */; };
+		51F485161A27E5EC00B4954F /* nb_surf.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485151A27E5EC00B4954F /* nb_surf.shader */; };
+		51F485181A27EB7600B4954F /* nb_frag.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485171A27EB7600B4954F /* nb_frag.shader */; };
+		EE29BCFA1D0E5379007418A0 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 512732A31A1BEBB70070D96E /* art.scnassets */; };
+		EE29BCFB1D0E539C007418A0 /* alpha_dot_product.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485131A27E3F400B4954F /* alpha_dot_product.shader */; };
+		EE29BCFC1D0E539C007418A0 /* bubble.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485111A27DEB300B4954F /* bubble.shader */; };
+		EE29BCFD1D0E539C007418A0 /* light_source_toon.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850F1A279C9C00B4954F /* light_source_toon.shader */; };
+		EE29BCFE1D0E539C007418A0 /* outline.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850D1A27954D00B4954F /* outline.shader */; };
+		EE29BCFF1D0E539C007418A0 /* mask.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F4850B1A27942400B4954F /* mask.shader */; };
+		EE29BD001D0E539C007418A0 /* nb_surf.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485151A27E5EC00B4954F /* nb_surf.shader */; };
+		EE29BD011D0E539C007418A0 /* nb_frag.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485171A27EB7600B4954F /* nb_frag.shader */; };
+		EE29BD021D0E539C007418A0 /* red_dot_product.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485061A2779E700B4954F /* red_dot_product.shader */; };
+		EE29BD031D0E539C007418A0 /* twisted.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F485081A2780E300B4954F /* twisted.shader */; };
+		EE29BD041D0E5407007418A0 /* fixed_toon.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484B31A223D9E00B4954F /* fixed_toon.shader */; };
+		EE29BD051D0E5407007418A0 /* geometry_ripple.shader in Resources */ = {isa = PBXBuildFile; fileRef = 512732C31A1C0D410070D96E /* geometry_ripple.shader */; };
+		EE29BD061D0E5407007418A0 /* sm_geom.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F51A22542100B4954F /* sm_geom.shader */; };
+		EE29BD071D0E5407007418A0 /* sm_surf.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484B11A223D9100B4954F /* sm_surf.shader */; };
+		EE29BD081D0E5407007418A0 /* sm_light.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F11A22540300B4954F /* sm_light.shader */; };
+		EE29BD091D0E5407007418A0 /* sm_frag.shader in Resources */ = {isa = PBXBuildFile; fileRef = 51F484F31A22541900B4954F /* sm_frag.shader */; };
+		EE2B50591D0E30CC006AF419 /* ModelShaderSettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F484F91A22775400B4954F /* ModelShaderSettingsModels.swift */; };
+		EE2B505A1D0E3155006AF419 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F484FE1A23D3B000B4954F /* Settings.swift */; };
+		EE2E11B71D0F63A700D536A7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512732A51A1BEBB70070D96E /* GameViewController.swift */; };
+		EE4A5CB81D0B6B15006CD26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A5CB71D0B6B15006CD26A /* AppDelegate.swift */; };
+		EE4A5CBF1D0B6B16006CD26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4A5CBD1D0B6B16006CD26A /* Main.storyboard */; };
+		EE4A5CC71D0B6EF2006CD26A /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A5CC61D0B6EF2006CD26A /* SplitViewController.swift */; };
+		EE4A5CC91D0B7043006CD26A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A5CC81D0B7043006CD26A /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5127329C1A1BEBB70070D96E /* CustomShaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		512732A01A1BEBB70070D96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		512732A11A1BEBB70070D96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		512732A31A1BEBB70070D96E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		512732A51A1BEBB70070D96E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		512732A81A1BEBB70070D96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		512732AA1A1BEBB70070D96E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		512732AD1A1BEBB70070D96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		512732C31A1C0D410070D96E /* geometry_ripple.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = geometry_ripple.shader; sourceTree = "<group>"; };
+		51F484B11A223D9100B4954F /* sm_surf.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sm_surf.shader; sourceTree = "<group>"; };
+		51F484B31A223D9E00B4954F /* fixed_toon.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fixed_toon.shader; sourceTree = "<group>"; };
+		51F484F11A22540300B4954F /* sm_light.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sm_light.shader; sourceTree = "<group>"; };
+		51F484F31A22541900B4954F /* sm_frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sm_frag.shader; sourceTree = "<group>"; };
+		51F484F51A22542100B4954F /* sm_geom.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sm_geom.shader; sourceTree = "<group>"; };
+		51F484F91A22775400B4954F /* ModelShaderSettingsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelShaderSettingsModels.swift; sourceTree = "<group>"; };
+		51F484FC1A23CC8B00B4954F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		51F484FE1A23D3B000B4954F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		51F485061A2779E700B4954F /* red_dot_product.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = red_dot_product.shader; sourceTree = "<group>"; };
+		51F485081A2780E300B4954F /* twisted.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twisted.shader; sourceTree = "<group>"; };
+		51F4850B1A27942400B4954F /* mask.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mask.shader; sourceTree = "<group>"; };
+		51F4850D1A27954D00B4954F /* outline.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = outline.shader; sourceTree = "<group>"; };
+		51F4850F1A279C9C00B4954F /* light_source_toon.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = light_source_toon.shader; sourceTree = "<group>"; };
+		51F485111A27DEB300B4954F /* bubble.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bubble.shader; sourceTree = "<group>"; };
+		51F485131A27E3F400B4954F /* alpha_dot_product.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alpha_dot_product.shader; sourceTree = "<group>"; };
+		51F485151A27E5EC00B4954F /* nb_surf.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nb_surf.shader; sourceTree = "<group>"; };
+		51F485171A27EB7600B4954F /* nb_frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nb_frag.shader; sourceTree = "<group>"; };
+		EE4A5CB51D0B6B15006CD26A /* CustomShadersOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShadersOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4A5CB71D0B6B15006CD26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE4A5CBE1D0B6B16006CD26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE4A5CC01D0B6B16006CD26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4A5CC61D0B6EF2006CD26A /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		EE4A5CC81D0B7043006CD26A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		512732991A1BEBB70070D96E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A5CB21D0B6B15006CD26A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		512732931A1BEBB70070D96E = {
+			isa = PBXGroup;
+			children = (
+				5127329E1A1BEBB70070D96E /* CustomShaders */,
+				EE4A5CB61D0B6B15006CD26A /* CustomShadersOSX */,
+				5127329D1A1BEBB70070D96E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5127329D1A1BEBB70070D96E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5127329C1A1BEBB70070D96E /* CustomShaders.app */,
+				EE4A5CB51D0B6B15006CD26A /* CustomShadersOSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5127329E1A1BEBB70070D96E /* CustomShaders */ = {
+			isa = PBXGroup;
+			children = (
+				512732A11A1BEBB70070D96E /* AppDelegate.swift */,
+				512732A51A1BEBB70070D96E /* GameViewController.swift */,
+				51F484F91A22775400B4954F /* ModelShaderSettingsModels.swift */,
+				51F484FC1A23CC8B00B4954F /* SettingsTableViewController.swift */,
+				51F484FE1A23D3B000B4954F /* Settings.swift */,
+				512732A71A1BEBB70070D96E /* Main.storyboard */,
+				512732AC1A1BEBB70070D96E /* LaunchScreen.xib */,
+				51F484FB1A22778300B4954F /* Assets */,
+				5127329F1A1BEBB70070D96E /* Supporting Files */,
+			);
+			path = CustomShaders;
+			sourceTree = "<group>";
+		};
+		5127329F1A1BEBB70070D96E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				512732A01A1BEBB70070D96E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51F484F71A22555C00B4954F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				51F4850A1A27938C00B4954F /* Nathanael */,
+				51F484F81A22557100B4954F /* WWDC Shaders */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		51F484F81A22557100B4954F /* WWDC Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				51F484B31A223D9E00B4954F /* fixed_toon.shader */,
+				512732C31A1C0D410070D96E /* geometry_ripple.shader */,
+				51F484F51A22542100B4954F /* sm_geom.shader */,
+				51F484B11A223D9100B4954F /* sm_surf.shader */,
+				51F484F11A22540300B4954F /* sm_light.shader */,
+				51F484F31A22541900B4954F /* sm_frag.shader */,
+			);
+			name = "WWDC Shaders";
+			sourceTree = "<group>";
+		};
+		51F484FB1A22778300B4954F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				512732AA1A1BEBB70070D96E /* Images.xcassets */,
+				512732A31A1BEBB70070D96E /* art.scnassets */,
+				51F484F71A22555C00B4954F /* Shaders */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		51F4850A1A27938C00B4954F /* Nathanael */ = {
+			isa = PBXGroup;
+			children = (
+				51F485131A27E3F400B4954F /* alpha_dot_product.shader */,
+				51F485111A27DEB300B4954F /* bubble.shader */,
+				51F4850F1A279C9C00B4954F /* light_source_toon.shader */,
+				51F4850D1A27954D00B4954F /* outline.shader */,
+				51F4850B1A27942400B4954F /* mask.shader */,
+				51F485151A27E5EC00B4954F /* nb_surf.shader */,
+				51F485171A27EB7600B4954F /* nb_frag.shader */,
+				51F485061A2779E700B4954F /* red_dot_product.shader */,
+				51F485081A2780E300B4954F /* twisted.shader */,
+			);
+			name = Nathanael;
+			sourceTree = "<group>";
+		};
+		EE4A5CB61D0B6B15006CD26A /* CustomShadersOSX */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A5CB71D0B6B15006CD26A /* AppDelegate.swift */,
+				EE4A5CC61D0B6EF2006CD26A /* SplitViewController.swift */,
+				EE4A5CC81D0B7043006CD26A /* SettingsViewController.swift */,
+				EE4A5CBD1D0B6B16006CD26A /* Main.storyboard */,
+				EE4A5CC01D0B6B16006CD26A /* Info.plist */,
+			);
+			path = CustomShadersOSX;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5127329B1A1BEBB70070D96E /* CustomShaders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 512732BD1A1BEBB70070D96E /* Build configuration list for PBXNativeTarget "CustomShaders" */;
+			buildPhases = (
+				512732981A1BEBB70070D96E /* Sources */,
+				512732991A1BEBB70070D96E /* Frameworks */,
+				5127329A1A1BEBB70070D96E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomShaders;
+			productName = CustomShaders;
+			productReference = 5127329C1A1BEBB70070D96E /* CustomShaders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE4A5CB41D0B6B15006CD26A /* CustomShadersOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4A5CC31D0B6B16006CD26A /* Build configuration list for PBXNativeTarget "CustomShadersOSX" */;
+			buildPhases = (
+				EE4A5CB11D0B6B15006CD26A /* Sources */,
+				EE4A5CB21D0B6B15006CD26A /* Frameworks */,
+				EE4A5CB31D0B6B15006CD26A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomShadersOSX;
+			productName = CustomShadersOSX;
+			productReference = EE4A5CB51D0B6B15006CD26A /* CustomShadersOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		512732941A1BEBB70070D96E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Nathanael Beisiegel";
+				TargetAttributes = {
+					5127329B1A1BEBB70070D96E = {
+						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0830;
+					};
+					EE4A5CB41D0B6B15006CD26A = {
+						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = 512732971A1BEBB70070D96E /* Build configuration list for PBXProject "CustomShaders" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 512732931A1BEBB70070D96E;
+			productRefGroup = 5127329D1A1BEBB70070D96E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5127329B1A1BEBB70070D96E /* CustomShaders */,
+				EE4A5CB41D0B6B15006CD26A /* CustomShadersOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5127329A1A1BEBB70070D96E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F485101A279C9C00B4954F /* light_source_toon.shader in Resources */,
+				51F484B21A223D9100B4954F /* sm_surf.shader in Resources */,
+				512732AE1A1BEBB70070D96E /* LaunchScreen.xib in Resources */,
+				512732C41A1C0D410070D96E /* geometry_ripple.shader in Resources */,
+				51F485071A2779E700B4954F /* red_dot_product.shader in Resources */,
+				51F4850C1A27942400B4954F /* mask.shader in Resources */,
+				51F4850E1A27954D00B4954F /* outline.shader in Resources */,
+				51F484F21A22540300B4954F /* sm_light.shader in Resources */,
+				51F484F41A22541900B4954F /* sm_frag.shader in Resources */,
+				512732AB1A1BEBB70070D96E /* Images.xcassets in Resources */,
+				51F485091A2780E300B4954F /* twisted.shader in Resources */,
+				51F484F61A22542100B4954F /* sm_geom.shader in Resources */,
+				512732A41A1BEBB70070D96E /* art.scnassets in Resources */,
+				51F484B41A223D9E00B4954F /* fixed_toon.shader in Resources */,
+				51F485181A27EB7600B4954F /* nb_frag.shader in Resources */,
+				51F485121A27DEB300B4954F /* bubble.shader in Resources */,
+				51F485141A27E3F400B4954F /* alpha_dot_product.shader in Resources */,
+				51F485161A27E5EC00B4954F /* nb_surf.shader in Resources */,
+				512732A91A1BEBB70070D96E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A5CB31D0B6B15006CD26A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE29BD041D0E5407007418A0 /* fixed_toon.shader in Resources */,
+				EE29BD051D0E5407007418A0 /* geometry_ripple.shader in Resources */,
+				EE29BD061D0E5407007418A0 /* sm_geom.shader in Resources */,
+				EE29BD071D0E5407007418A0 /* sm_surf.shader in Resources */,
+				EE29BD081D0E5407007418A0 /* sm_light.shader in Resources */,
+				EE29BD091D0E5407007418A0 /* sm_frag.shader in Resources */,
+				EE4A5CBF1D0B6B16006CD26A /* Main.storyboard in Resources */,
+				EE29BCFA1D0E5379007418A0 /* art.scnassets in Resources */,
+				EE29BCFB1D0E539C007418A0 /* alpha_dot_product.shader in Resources */,
+				EE29BCFC1D0E539C007418A0 /* bubble.shader in Resources */,
+				EE29BCFD1D0E539C007418A0 /* light_source_toon.shader in Resources */,
+				EE29BCFE1D0E539C007418A0 /* outline.shader in Resources */,
+				EE29BCFF1D0E539C007418A0 /* mask.shader in Resources */,
+				EE29BD001D0E539C007418A0 /* nb_surf.shader in Resources */,
+				EE29BD011D0E539C007418A0 /* nb_frag.shader in Resources */,
+				EE29BD021D0E539C007418A0 /* red_dot_product.shader in Resources */,
+				EE29BD031D0E539C007418A0 /* twisted.shader in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		512732981A1BEBB70070D96E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F484FD1A23CC8B00B4954F /* SettingsTableViewController.swift in Sources */,
+				512732A61A1BEBB70070D96E /* GameViewController.swift in Sources */,
+				51F484FA1A22775400B4954F /* ModelShaderSettingsModels.swift in Sources */,
+				512732A21A1BEBB70070D96E /* AppDelegate.swift in Sources */,
+				51F484FF1A23D3B000B4954F /* Settings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A5CB11D0B6B15006CD26A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4A5CB81D0B6B15006CD26A /* AppDelegate.swift in Sources */,
+				EE2B50591D0E30CC006AF419 /* ModelShaderSettingsModels.swift in Sources */,
+				EE4A5CC91D0B7043006CD26A /* SettingsViewController.swift in Sources */,
+				EE2B505A1D0E3155006AF419 /* Settings.swift in Sources */,
+				EE4A5CC71D0B6EF2006CD26A /* SplitViewController.swift in Sources */,
+				EE2E11B71D0F63A700D536A7 /* GameViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		512732A71A1BEBB70070D96E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				512732A81A1BEBB70070D96E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		512732AC1A1BEBB70070D96E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				512732AD1A1BEBB70070D96E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EE4A5CBD1D0B6B16006CD26A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4A5CBE1D0B6B16006CD26A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		512732BB1A1BEBB70070D96E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		512732BC1A1BEBB70070D96E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		512732BE1A1BEBB70070D96E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomShaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NBDeveloper.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		512732BF1A1BEBB70070D96E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomShaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NBDeveloper.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EE4A5CC11D0B6B16006CD26A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = CustomShadersOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = incrementalinnovation.CustomShadersOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE4A5CC21D0B6B16006CD26A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = CustomShadersOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = incrementalinnovation.CustomShadersOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		512732971A1BEBB70070D96E /* Build configuration list for PBXProject "CustomShaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				512732BB1A1BEBB70070D96E /* Debug */,
+				512732BC1A1BEBB70070D96E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		512732BD1A1BEBB70070D96E /* Build configuration list for PBXNativeTarget "CustomShaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				512732BE1A1BEBB70070D96E /* Debug */,
+				512732BF1A1BEBB70070D96E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4A5CC31D0B6B16006CD26A /* Build configuration list for PBXNativeTarget "CustomShadersOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4A5CC11D0B6B16006CD26A /* Debug */,
+				EE4A5CC21D0B6B16006CD26A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 512732941A1BEBB70070D96E /* Project object */;
+}
