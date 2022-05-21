@@ -21,7 +21,7 @@ This project could be modified to test Scenekit-Metal shader snippets instead of
 
 
 
-Requirements:
+**Requirements:**
 
 XCode 8.x running under macOS Sierra (10.12.x).
 
